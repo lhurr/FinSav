@@ -44,7 +44,7 @@ SYNTHETIC_PROMPT = """You are a helpful assistant who answers questions based on
 - Data: {data}
 - Today: {today}
 
-If the provided Data does not contain statistics needed to answer Question, you MUST not reply there is no data/no provided data, JUST say 'Here is your info'
+If the provided Data does not contain statistics needed to answer Question, you MUST not reply there is no data/no provided data
 """
 
 
