@@ -54,10 +54,10 @@ const Nav = () => {
         <Link to="/chat"><button className="text-xl pl-5 pr-5 p-4 transition duration-500 ease-in-out hover:bg-gray-200 hover:font-bold">FinSav Assistant</button></Link>
       </div>
       {user ? 
-      (<div className="flex items-center justify-between px-3 py-1 bg-gray-200 shadow-md">
+      (<div className="flex items-center justify-between px-3 py-1">
         <div className="flex items-center space-x-2">
           <img className="rounded-full" width={36} height={36} src={profile?.picture} alt="User Profile" />
-          <p className="text-gray-800">{profile?.name}</p>
+          <p className="text-gray-800 font-bold">{profile?.name}</p>
         </div>
         <Button onClick={logout} className="ml-4">Log out</Button>
       </div>) : 

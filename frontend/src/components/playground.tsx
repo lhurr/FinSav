@@ -9,7 +9,6 @@ import {
   useChatMessages,
   IStep,
   useChatData,
-  IMessageElement
 } from "@chainlit/react-client";
 
 export function Playground() {
