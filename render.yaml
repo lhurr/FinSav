@@ -1,0 +1,12 @@
+services:
+  # A web service that builds from a Dockerfile
+  - type: web
+    runtime: docker
+    name: frontend
+    rootDir: ./backend # Default: Repo root
+    dockerContext : ./frontend
+  - type: web
+    runtime: docker
+    name: backend
+    rootDir: ./backend # Default: Repo root
+    dockerContext : ./backend
