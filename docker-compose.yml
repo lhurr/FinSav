@@ -1,0 +1,83 @@
+# version: '3.8'
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./backend:/code
+    # depends_on:
+    #   - ollama
+    # networks:
+    #   - ollama-docker
+    command: "uvicorn app:app --host 0.0.0.0 --port 3002 --reload --log-level critical"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 3001:3001
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    depends_on:
+      - backend
+      # - ollama
+    # networks:
+    #   - ollama-docker
+
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   ports:
+  #     - 11434:11434
+  #   volumes:
+  #     - .:/code
+  #     - ./ollama/ollama:/root/.ollama
+  #     - ./start-service.sh:/start-service.sh
+  #   container_name: ollama
+  #   restart: always
+  #   networks:
+  #     - ollama-docker
+  #   healthcheck:
+  #     test: [ "CMD", "pgrep", "-f", "ollama" ]
+  #     interval: 30s
+  #     retries: 10
+  #     start_period: 120s
+  #     timeout: 10s
+  #   entrypoint: /bin/sh
+    # command: /start-service.sh
+  # postgres:
+  #   image: postgres:16-alpine
+  #   ports:
+  #     - 5432:5432
+  #   volumes:
+  #     - ./database_data:/var/lib/postgresql/data
+  #     - ./config/db_init.sql:/docker-entrypoint-initdb.d/db_init.sql
+  #   environment:
+  #     - POSTGRES_PASSWORD=s3cret
+  #     - POSTGRES_USER=admin
+  #     - POSTGRES_DB=finsav
+  #   networks:
+  #     - pgsql
+
+  # pgadmin:
+  #   container_name: container-pgadmin
+  #   image: dpage/pgadmin4
+  #   depends_on:
+  #     - postgres
+  #   ports:
+  #     - "5050:80"
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: admin@admin.com
+  #     PGADMIN_DEFAULT_PASSWORD: s3cret
+  #   restart: unless-stopped
+  #   networks:
+  #     - pgsql
+
+
+
+
+networks:
+  ollama-docker:
+    external: false
+  # pgsql:
+  #   driver: bridge

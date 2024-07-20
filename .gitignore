@@ -1,0 +1,7 @@
+.chainlit
+.cache
+__pycache__
+.files
+ollama
+node_modules
+.env
