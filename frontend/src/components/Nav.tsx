@@ -46,7 +46,7 @@ const Nav = () => {
   };
 
   return (
-    <div className='flex flex-row justify-between w-full items-center fixed bg-white border-gray border-b-2 pr-2 pl-2'>
+    <div className='z-[10000] flex flex-row justify-between w-full items-center fixed bg-white border-gray border-b-2 pr-2 pl-2'>
       <div><img src="/logo.png" alt="Logo" /></div>
       <div className="flex flex-row font-semibold pl-20">
         <Link to="/"><button className="text-xl pl-5 pr-5 p-4 transition duration-500 ease-in-out hover:bg-gray-200 hover:font-bold">Home</button></Link>

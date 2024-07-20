@@ -5,14 +5,14 @@ import MovingBar from './MovingBar';
 const HomePage = () => {
   const questions = [
     [
-      "What is the stock market?",
-      "How to invest in real estate?",
-      "What are mutual funds?",
-      "How to save for retirement?",
-      "What is cryptocurrency?",
-      "How to create a budget?",
-      "What is an ETF?",
-      "How to improve credit score?",
+      "What is Apple's market capitalization?",
+      "Give me an overview of Netflix's earnings report.",
+      "Tell me about the historical stock prices of Amazon.",
+      "What are the latest financials of Facebook?",
+      "How is the overall performance of the S&P 500?",
+      "Tell me about the P/E ratio of Tesla.",
+      "What is the dividend yield of Coca-Cola?",
+      "Show me the revenue growth of Alphabet Inc.",
     ],
     [
       'Tell me more about NVIDIA!',
