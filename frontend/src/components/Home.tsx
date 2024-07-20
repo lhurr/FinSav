@@ -34,7 +34,7 @@ const HomePage = () => {
       <div className="mt-10 ml-40 mr-40 mb-10 mx-5 p-5 bg-white shadow-md rounded-lg">
         <h2 className="text-3xl font-semibold mb-5">What is FinSav?</h2>
         <p className="text-lg mb-5">
-          FinSav is a cutting-edge AI powered by advanced language models designed to answer all your finance-related questions. Whether you're looking for market trends, investment advice, or financial planning tips, FinSav is here to help.
+          FinSav is a cutting-edge <i>real-time</i> smart finance assistant powered by advanced language models designed to provide insights to all your finance-related questions. Whether you're looking for up-to-date market trends, investment advice, or financial planning tips, FinSav is here to help.
         </p>
       </div>
       <Link to="chat">
