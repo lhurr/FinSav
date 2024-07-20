@@ -15,7 +15,7 @@ const userEnv = {};
 
 const router = createBrowserRouter([
   {
-    element: <Layout />, 
+    element: <Layout />,
     children: [
       {
         path: 'chat',
@@ -48,7 +48,7 @@ function App() {
     if (session?.socket.connected) {
       return;
     }
-    fetch("http://localhost:3002/custom-auth")
+    fetch("https://backend-x8u8.onrender.com/custom-auth")
       .then((res) => {
         return res.json();
       })
